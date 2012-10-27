@@ -23,7 +23,7 @@
  ***************************************************************/
 
 // require_once(PATH_tslib . 'class.tslib_pibase.php');
-require_once(t3lib_extMgm::extPath("tp_test") . 'pi1/olc_reader.php.inc');
+require_once(t3lib_extMgm::extPath("mb_olc_flights") . 'pi1/olc_reader.php.inc');
 
 /**
  * Plugin 'OLC Flights' for the 'mb_olc_flights' extension.
@@ -548,16 +548,25 @@ class tx_mbolcflights_pi1 extends tslib_pibase {
                 $markerArray['###DATE###']=$str_date;
                 $markerArray['###POINTS###']=$points;
                 $markerArray['###NAME###']=$this->_filter_name($f["name"]);
-                $markerArray['###LINK###']=$this->_rewrite_link($f["Info"], "[mehr ...]"); // TODO: cache!
-                $markerArray['###AC_LINK_TXT###']=$this->_get_ac_link($f["Aircraft"],$f["Aircraft"]); // TODO: cache!
-                $markerArray['###AC_LINK_PIC###']=$this->cObj->IMAGE(array(
-                    'file' => $this->_get_ac_image($f["Aircraft"]),
-                    'file.maxW' => $this->img_maxw,
-                    'file.maxH' => $this->img_maxh,
-                ));                // FIXME: scaling does not take effect!
+                $markerArray['###LINK###']=$this->_rewrite_link($f["Info"], $this->pi_getLL("morelink")); 
+                $markerArray['###AC_LINK_TXT###']=$this->_get_ac_link($f["Aircraft"],$f["Aircraft"]);
                 $markerArray['###SPEED###']= str_replace(".", ",", $f["km/h"]); // TODO: localize
                 $markerArray['###DISTANCE###']= str_replace(".", ",", $f["km"]); // TODO: localize  
                 
+                // scale and render image
+                $imgconf = array(
+                    'file' => $this->_get_ac_image($f["Aircraft"]),
+                    'altText' => $f['Aircraft'],
+                );
+                if (!empty($this->img_maxw)) {
+                    $imgconf['file.']['maxW'] = $this->img_maxw;                    
+                }
+                if (!empty($this->img_maxw)) {
+                    $imgconf['file.']['maxH'] = $this->img_maxh;
+                }                
+                $markerArray['###AC_LINK_PIC###']=$this->_get_ac_link($f['Aircraft'], $this->cObj->IMAGE($imgconf));
+                
+                // complete.
                 return $this->cObj->substituteMarkerArray($tpl,$markerArray);
         }
 

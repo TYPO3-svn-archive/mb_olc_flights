@@ -1,0 +1,33 @@
+plugin.tx_mbolcflights_pi1 {   
+   # olc url
+   baseurl=http://www.onlinecontest.org/olc-2.0/gliding
+   
+   # custom HTML template relative to PATH_site
+   #template=fileadmin/template.html
+   
+   # mapping of A/C names to links and images   
+   ac_mapping {
+   	astir1 {
+   		name = astir jeans
+   		link = fileadmin/astir.html
+   		img = fileadmin/astir.jpg
+   	}
+   	dg505 {
+   		name = DG 505
+		img = fileadmin/dg505.jpg
+   		link = http://aeroclub-frankenhausen.de/der-aeroclub/flugzeuge-und-technik/#dg505
+   	}
+   	ls4 {
+   		name = LS 4
+   		link = 64,here
+   		img = fileadmin/ls4.jpg
+   	}
+   	default {
+   		# this is applied when no other fits
+   		name = default
+   		img = fileadmin/nopic.jpg
+   	}
+   }
+   img_maxw=120
+   img_maxh=80
+}

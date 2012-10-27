@@ -58,7 +58,7 @@ class tx_mbolcflights_pi1_wizicon {
 	 * @return array The array with language labels
 	 */
 	protected function includeLocalLang() {
-		$llFile = t3lib_extMgm::extPath('mb_olc_flights/pi1') . 'locallang.xml';
+		$llFile = t3lib_extMgm::extPath('mb_olc_flights') . 'locallang.xml';
 		$version = class_exists('t3lib_utility_VersionNumber')
 				? t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version)
 				: t3lib_div::int_from_ver(TYPO3_version);

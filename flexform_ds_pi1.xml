@@ -6,7 +6,7 @@
   <settings.main type="array">
    <ROOT type="array">
     <TCEforms type="array">
-     <sheetTitle>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
+     <sheetTitle>LLL:EXT:mb_olc_flights/locallang_db.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
     </TCEforms>
     <type>array</type>
     <el type="array">     
@@ -16,7 +16,7 @@
         <type_t3dev>check</type_t3dev>
         <type>check</type>
        </config>
-       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_show_best</label>
+       <label>LLL:EXT:mb_olc_flights/locallang_db.xml:tt_content.pi_flexform.field_show_best</label>
       </TCEforms>
      </show_best>
      <days type="array">
@@ -34,7 +34,7 @@
          <lower type="integer">0</lower>
         </range>
        </config>
-       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_days</label>
+       <label>LLL:EXT:mb_olc_flights/locallang_db.xml:tt_content.pi_flexform.field_days</label>
       </TCEforms>
      </days>
      <lastday type="array">
@@ -43,7 +43,7 @@
         <type_t3dev>check</type_t3dev>
         <type>check</type>
        </config>
-       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_lastday</label>
+       <label>LLL:EXT:mb_olc_flights/locallang_db.xml:tt_content.pi_flexform.field_lastday</label>
       </TCEforms>
      </lastday>
      <limit type="array">
@@ -61,7 +61,7 @@
          <lower type="integer">0</lower>
         </range>
        </config>
-       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_limit</label>
+       <label>LLL:EXT:mb_olc_flights/locallang_db.xml:tt_content.pi_flexform.field_limit</label>
       </TCEforms>
      </limit>
     </el>

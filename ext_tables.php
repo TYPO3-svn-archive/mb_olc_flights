@@ -26,7 +26,6 @@ if (TYPO3_MODE === 'BE') {
 	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_mbolcflights_pi1_wizicon'] = t3lib_extMgm::extPath($_EXTKEY) . 'pi1/class.tx_mbolcflights_pi1_wizicon.php';
 }
 
-
 /*
 if (TYPO3_MODE === 'BE')	{
 	$GLOBALS['TBE_MODULES_EXT']['xMOD_alt_clickmenu']['extendCMclasses'][] = array(
@@ -34,5 +33,5 @@ if (TYPO3_MODE === 'BE')	{
 		'path' => t3lib_extMgm::extPath($_EXTKEY).'class.tx_mbolcflights_cm1.php'
 	);
 }
- */
+*/
 ?>

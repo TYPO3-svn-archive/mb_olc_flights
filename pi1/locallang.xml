@@ -14,6 +14,7 @@
                         <label index="flights_from">Flights from</label>
                         <label index="flights_of_last_n_days">Flights of the last %d days</label>
                         <label index="most_recent_flight">Most recent flight</label>
+                        <label index="morelink">[more....]</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="pi1_title">OLC Flüge</label>
@@ -24,6 +25,7 @@
                         <label index="flights_from">Flüge vom</label>
                         <label index="flights_of_last_n_days">Flüge der letzten %d Tage</label>
                         <label index="most_recent_flight">Neuester Flug</label>   
+                        <label index="morelink">[mehr....]</label>
 		</languageKey>
 	</data>
 </T3locallang>
