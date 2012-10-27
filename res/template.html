@@ -1,0 +1,75 @@
+<!--
+
+Markers:
+###TIME_START###
+###TIME_END###
+###DURATION###
+###DATE###
+###NAME###
+###LINK###
+###AC_LINK_TXT###
+###AC_LINK_PIC###
+###TITLE_LIST###
+###SPEED###
+###DISTANCE###
+
+-->
+
+<!--  how listview is rendered -->
+<!-- ###LISTVIEW### -->
+<div class="olc">
+    <h2 class="fltab"><span>&#9733; WEITESTER FLUG &#9733;</span></h2>
+    <!-- how the best flight is rendered -->
+    <!-- ###FLIGHT_BEST### -->
+    <div class="fltab">
+        <table border="0" width="100%">
+            <tr>
+                <td align="center">
+                    ###AC_LINK_PIC###
+                <td valign="middle" align="center">
+                    <span class="km">###DISTANCE### km</span><br><br>
+                    von ###NAME###
+                </td>
+            </tr>
+        </table>
+        geflogen mit <em>###AC_LINK_TXT###</em>
+        am <b>###DATE###</b> von ###TIME_START### bis ###TIME_END### Uhr (###DURATION### h) <br>
+        mit durchschnittlich ###SPEED### km/h<br><br>
+        ###LINK###
+    </div>
+    <!-- ###FLIGHT_BEST### -->
+
+    <h2 class="nfltab"><span>###TITLE_LIST###</span></h2>
+    <div class="nfltab">
+        <ul>            
+            <!-- how one flight in listview is rendered -->
+            <!-- ###FLIGHT_LIST### -->
+            <li>
+                <span class="kmsmall">###DISTANCE### km</span> &nbsp;&nbsp;
+                von ###NAME### 
+                geflogen am <b>###DATE###</b> mit <em>###AC_LINK_TXT###</em>
+                von ###TIME_START### bis ###TIME_END### Uhr (###DURATION### h) 
+                ###LINK###
+            </li>
+            <!-- ###FLIGHT_LIST### -->            
+        </ul>
+    </div>
+</div>
+<!-- ###LISTVIEW### -->
+
+
+
+
+<!-- how detail view is rendered -->
+<!-- ###DETAILVIEW### -->
+<div class="olc">
+    <h2>Flugansicht</h2>    
+    <!-- TODO -->
+    <p>###BACKLINK###</p>
+    <h3>###TITLE###</h3>
+    <p>###DATUM###</p>
+    <div>###TEXT###</div>
+    <p>###IMAGE###</p>
+    <p>###LINK###</p>    
+</div>
+<!-- ###DETAILVIEW### -->

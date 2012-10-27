@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'mb_olc_flights'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.list_type_pi1">OLC Flights</label>
+                        <label index="tt_content.pi_flexform.sheet_general">General Settings</label>
+                        <label index="tt_content.pi_flexform.field_show_best">Show best</label>
+                        <label index="tt_content.pi_flexform.field_lastday">Only last day</label>                        
+                        <label index="tt_content.pi_flexform.field_days">Number of days back</label>                        
+                        <label index="tt_content.pi_flexform.field_limit">Maximum number of flights</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tt_content.list_type_pi1">OLC Flüge</label>
+                        <label index="tt_content.pi_flexform.sheet_general">Allgemein</label>
+                        <label index="tt_content.pi_flexform.field_show_best">Besten Flug zeigen</label>
+                        <label index="tt_content.pi_flexform.field_lastday">Nur den letzten Flugtag zeigen</label>                        
+                        <label index="tt_content.pi_flexform.field_days">Anzahl Tage zurück</label>                        
+                        <label index="tt_content.pi_flexform.field_limit">Maximale Anzahl Flüge</label>
+		</languageKey>
+	</data>
+</T3locallang>

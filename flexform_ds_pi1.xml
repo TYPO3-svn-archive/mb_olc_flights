@@ -1,0 +1,71 @@
+<T3DataStructure>
+ <meta type="array">
+  <langDisable>1</langDisable>
+ </meta>
+ <sheets type="array">
+  <settings.main type="array">
+   <ROOT type="array">
+    <TCEforms type="array">
+     <sheetTitle>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
+    </TCEforms>
+    <type>array</type>
+    <el type="array">     
+     <show_best type="array">
+      <TCEforms type="array">
+       <config type="array">
+        <type_t3dev>check</type_t3dev>
+        <type>check</type>
+       </config>
+       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_show_best</label>
+      </TCEforms>
+     </show_best>
+     <days type="array">
+      <TCEforms type="array">
+       <config type="array">
+        <type_t3dev>integer</type_t3dev>
+        <type>input</type>
+        <size type="integer">4</size>
+        <max type="integer">4</max>
+        <eval>int</eval>
+        <default type="integer">30</default>
+        <checkbox type="integer">0</checkbox>
+        <range type="array">
+         <upper type="integer">365</upper>
+         <lower type="integer">0</lower>
+        </range>
+       </config>
+       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_days</label>
+      </TCEforms>
+     </days>
+     <lastday type="array">
+      <TCEforms type="array">
+       <config type="array">
+        <type_t3dev>check</type_t3dev>
+        <type>check</type>
+       </config>
+       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_lastday</label>
+      </TCEforms>
+     </lastday>
+     <limit type="array">
+      <TCEforms type="array">
+       <config type="array">
+        <type_t3dev>integer</type_t3dev>
+        <type>input</type>
+        <size type="integer">4</size>
+        <max type="integer">4</max>
+        <eval>int</eval>
+        <default type="integer">20</default>
+        <checkbox type="integer">0</checkbox>
+        <range type="array">
+         <upper type="integer">100</upper>
+         <lower type="integer">0</lower>
+        </range>
+       </config>
+       <label>LLL:EXT:tp_test/locallang_db.xml:tt_content.pi_flexform.field_limit</label>
+      </TCEforms>
+     </limit>
+    </el>
+   </ROOT>
+  </settings.main>  
+ </sheets>
+</T3DataStructure>

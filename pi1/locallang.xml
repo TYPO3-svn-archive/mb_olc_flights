@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'mb_olc_flights'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">OLC Flights</label>
+			<label index="pi1_plus_wiz_description">Shows OLC flights</label>
+                        <label index="back">Back to list</label>
+                        <label index="nodata">no data available!</label>
+                        <label index="noflights">No flights!</label>
+                        <label index="flights_from">Flights from</label>
+                        <label index="flights_of_last_n_days">Flights of the last %d days</label>
+                        <label index="most_recent_flight">Most recent flight</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="pi1_title">OLC Flüge</label>
+			<label index="pi1_plus_wiz_description">OLC Flüge anzeigen</label>
+                        <label index="back">zurück zur Liste</label>
+                        <label index="nodata">keine Daten vorhanden!</label>
+                        <label index="noflights">Hm...da ist wohl niemand geflogen.</label>
+                        <label index="flights_from">Flüge vom</label>
+                        <label index="flights_of_last_n_days">Flüge der letzten %d Tage</label>
+                        <label index="most_recent_flight">Neuester Flug</label>   
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,90 @@
+plugin.tx_mb_olc_flights._CSS_DEFAULT_STYLE (
+ 
+    /* CSS styles for OLC plugin */
+
+    div.olc {
+            padding: .5em;
+            padding-left:1em;
+    }
+
+    div.olc table {
+            border: none;	
+            border-spacing:5px;
+            border-collapse:separate;
+    }
+
+    div.olc table td {
+            padding-top: .5em;
+            padding-bottom: .5em;
+            padding-left: 1em;
+            padding-right: 1em;
+    }
+
+    h2.fltab {
+            letter-spacing: 0;
+            text-align: left;
+            background: transparent;
+            margin: 0;
+            }
+
+    h2.fltab span {
+            padding: 8px 15px;
+            background: #ddd url(img/tab.gif) no-repeat right top;
+            color:#444;
+    }
+
+    div.fltab {
+            margin: 0 0 25px 0;
+            padding: 15px;
+            background: #dddddd;
+            background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
+            background: -moz-linear-gradient(top,#ddd,#eee);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#eeeeee');
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            /*max-width:600px;*/
+    }
+    h2.nfltab {
+            letter-spacing: 0;
+            text-align: left;
+            background: transparent;
+            margin: 0;
+            }
+
+    h2.nfltab span {
+            padding: 8px 15px;
+            background: #fc8 url(img/tab.gif) no-repeat right top;
+            color:#b62;
+    }
+
+    div.nfltab {
+            margin: 0 0 25px 0;
+            padding: 15px;
+            background: #fc8;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fc8), to(#eee));
+            background: -moz-linear-gradient(top,#fc8,#eee);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc88', endColorstr='#eeeeee');
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            /*max-width:600px;*/
+    }
+
+    .olcfooter {font-size: .9em;}
+
+    .km {
+            font-size: 2em;
+            font-weight: bold;
+            font-family: verdana;
+            text-shadow: 4px 4px 8px gray;	
+            letter-spacing: .1em;
+    }
+    .kmsmall {
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: verdana;
+            text-shadow: 4px 4px 8px gray;	
+            letter-spacing: .1em;
+    }
+ )
