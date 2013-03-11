@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Displays OLC flights (soaring) by date, shows best flight and allows for links to aircraft details.',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '0.1.2',
+	'version' => '0.1.3',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -34,6 +34,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
+			'typo3'=>'4.5.0-4.5.25',
 		),
 		'conflicts' => array(
 		),
