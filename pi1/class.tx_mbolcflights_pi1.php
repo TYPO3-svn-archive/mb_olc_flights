@@ -534,7 +534,7 @@ class tx_mbolcflights_pi1 extends tslib_pibase {
          * @return string html code
          */
         function _render_flight($f,$tpl) {
-            
+                if (empty($f)) return ""; // no best flight -> zero string
                 $startzeit = strtotime($f["Start"]);  //$content .=  "start=$startzeit<br>";
                 $endzeit = strtotime($f["End"]); //$content .=  "end=$endzeit<br>";
                 $flugzeit = $endzeit-$startzeit; //$content .=  "flugzeit=$flugzeit";
@@ -565,7 +565,6 @@ class tx_mbolcflights_pi1 extends tslib_pibase {
                     $imgconf['file.']['maxH'] = $this->img_maxh;
                 }                
                 $markerArray['###AC_LINK_PIC###']=$this->_get_ac_link($f['Aircraft'], $this->cObj->IMAGE($imgconf));
-                
                 // complete.
                 return $this->cObj->substituteMarkerArray($tpl,$markerArray);
         }
@@ -608,11 +607,13 @@ class tx_mbolcflights_pi1 extends tslib_pibase {
             $content_flightbest="";
             $content_flightlist="";
             $title_list="";
+            $list_empty=0;
+            $single_empty=0;
             
             // bester flug nur wenn nicht die letzten 'days' tage angezeigt werden
             if ($this->best==1) {
                 $best = $res->get_best();
-                $content_flightbest .= $this->_render_flight($best,$tpl_bflight);
+                $content_flightbest .= $this->_render_flight($best,$tpl_bflight);                    
             } 
 
             if ($this->lastday == 1 && $this->limit != 1) {
@@ -620,10 +621,14 @@ class tx_mbolcflights_pi1 extends tslib_pibase {
                 if (empty($this->limit)) { $this->limit = 0; }
 
                 $recent = $res->get_recent_day($this->limit);
-
-                $maxdate_str = strtoupper(strftime("%d. %B", $res->get_max_date()));
-                $content_flightlist .= $this->_render_flights($recent,$tpl_lflight); // show list
-                $title_list = $this->pi_getLL("flights_from") . " " . $maxdate_str;
+                if (empty($recent)) {
+                    $content_flightlist .=  $this->pi_getLL("noflights");
+                    $title_list = $this->pi_getLL("last_flightday");
+                } else {
+                    $maxdate_str = strtoupper(strftime("%d. %B", $res->get_max_date()));
+                    $content_flightlist .= $this->_render_flights($recent,$tpl_lflight); // show list                  
+                    $title_list = $this->pi_getLL("flights_from") . " " . $maxdate_str;
+                }  
             } else if (!empty($this->days)) {
                 // all flights from today looking 'days' backward
                 if (empty($this->limit)) { $this->limit = 0; }
@@ -633,16 +638,23 @@ class tx_mbolcflights_pi1 extends tslib_pibase {
 
                 $maxdate_str = strtoupper(strftime("%d. %B", $res->get_max_date()));
                 if (empty($recent)) {
-                   $content_flightlist .=  "In den letzten $this->days Tagen fanden keine Fl&uuml;ge statt...<br>";
+                    $content_flightlist .=  sprintf($this->pi_getLL("noflights_in_last_n_days"), $this->days);//"In den letzten $this->days Tagen fanden keine Fl&uuml;ge statt...<br>";
                 } else {
                    $content_flightlist .= $this->_render_flights($recent,$tpl_lflight); // show list
                 }
                 $title_list = sprintf($this->pi_getLL("flights_of_last_n_days"), $this->days);
             } else {
                 // DEFAULT: just the most recent flight
+
                 $latest = $res->get_latest();
-                $content_flightlist .= $this->_render_flight($latest,$tpl_lflight);  // show single
-                $title_list = $this->pi_getLL("most_recent_flight");
+                if (empty($latest)) {
+                    $content_flightlist .=  $this->pi_getLL("noflights");
+                    $title_list = $this->pi_getLL("most_recent_flight");
+                } else {
+                   $content_flightlist .= $this->_render_flight($latest,$tpl_lflight);  // show single
+                   $title_list = $this->pi_getLL("most_recent_flight");
+                }
+
             }
 
             // clean

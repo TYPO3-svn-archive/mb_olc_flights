@@ -9,3 +9,7 @@
 2013-03-11  Martin Becker  <vbmazter@web.de>
 
 	* Added dependency for typo3 version
+
+2013-03-24  Martin Becker  <vbmazter@web.de>
+
+	* Fixes when no flights are in the requested date range.

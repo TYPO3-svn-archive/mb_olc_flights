@@ -10,9 +10,11 @@
 			<label index="pi1_plus_wiz_description">Shows OLC flights</label>
                         <label index="back">Back to list</label>
                         <label index="nodata">no data available!</label>
-                        <label index="noflights">No flights!</label>
+                        <label index="noflights">No flights (yet).</label>
                         <label index="flights_from">Flights from</label>
                         <label index="flights_of_last_n_days">Flights of the last %d days</label>
+                        <label index="last_flightday">Flights of the most recent active day</label>
+                        <label index="noflights_in_last_n_days">There were no flights in the last %d days.</label>
                         <label index="most_recent_flight">Most recent flight</label>
                         <label index="morelink">[more....]</label>
 		</languageKey>
@@ -21,9 +23,11 @@
 			<label index="pi1_plus_wiz_description">OLC Flüge anzeigen</label>
                         <label index="back">zurück zur Liste</label>
                         <label index="nodata">keine Daten vorhanden!</label>
-                        <label index="noflights">Hm...da ist wohl niemand geflogen.</label>
+                        <label index="noflights">Hm...da ist wohl (noch) niemand geflogen.</label>
                         <label index="flights_from">Flüge vom</label>
                         <label index="flights_of_last_n_days">Flüge der letzten %d Tage</label>
+                        <label index="last_flightday">Flüge des letzten Flugtages</label>
+                        <label index="noflights_in_last_n_days">In den letzten %d Tagen fanden keine Flüge statt.</label>
                         <label index="most_recent_flight">Neuester Flug</label>   
                         <label index="morelink">[mehr....]</label>
 		</languageKey>
